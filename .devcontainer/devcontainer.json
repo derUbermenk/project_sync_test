@@ -1,0 +1,8 @@
+{
+  "name": "project1-dev",
+  "image": "pipeline-orchestrator/airflow",
+  "workspaceFolder": "/project1",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/project1,type=bind"
+  ]
+}

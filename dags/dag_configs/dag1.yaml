@@ -1,0 +1,6 @@
+dag_name: dag1
+tasks:
+  - task1:
+      image_tag: task1-feat-branch
+  - task2:
+      image_tag: task2-feat-branch
