@@ -33,10 +33,6 @@ def _load_yaml_configs() -> list[dict]:
             log.exception("Failed to parse %s", yaml_file)
             continue
 
-        if not cfg or "dag_id" not in cfg:
-            log.warning("Skipping %s: missing dag_id", yaml_file)
-            continue
-
         configs.append(cfg)
 
     return configs
