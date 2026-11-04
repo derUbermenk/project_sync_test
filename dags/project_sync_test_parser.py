@@ -11,7 +11,7 @@ from pipeline_orchestrator.paths import PROJECTS_DIR
 
 log = logging.getLogger(__name__)
 
-CONFIG_DIR = PROJECTS_DIR / "project1" / "dags" / "dag_configs"
+CONFIG_DIR = PROJECTS_DIR / "project_sync_test" / "dags" / "dag_configs"
 
 IMAGE_REPO = "your-registry.example.com/project1"
 NAMESPACE = "airflow"
