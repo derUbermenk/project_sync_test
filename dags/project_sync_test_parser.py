@@ -13,9 +13,9 @@ log = logging.getLogger(__name__)
 
 CONFIG_DIR = PROJECTS_DIR / "project_sync_test" / "dags" / "dag_configs"
 
-IMAGE_REPO = "your-registry.example.com/project1"
+IMAGE_REPO = "your-registry.example.com/project_sync_test"
 NAMESPACE = "airflow"
-PROJECT_NAME = "project1"
+PROJECT_NAME = "project_sync_test"
 
 
 def _load_yaml_configs() -> list[dict]:
@@ -39,6 +39,7 @@ def _load_yaml_configs() -> list[dict]:
 
 
 def _build_dag(cfg: dict) -> DAG:
+    # what if dag id is project_name-branch-dagname
     dag_id = f"{PROJECT_NAME}_{cfg['dag_name']}"
     tasks_cfg = cfg.get("tasks", [])
 
